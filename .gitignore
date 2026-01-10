@@ -1,0 +1,13 @@
+# Ignore videos
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# PyCharm
+.idea/

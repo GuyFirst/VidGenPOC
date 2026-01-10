@@ -1,0 +1,52 @@
+{
+  "code_snippet": [
+    "x = 'guy'",
+    "if (x == 'student'):",
+    "    x = 'student'",
+    "y = guy",
+    "print(y)"
+  ],
+  "total_duration": 23.0,
+  "frames": [
+    {
+      "time_start": 0.0,
+      "duration": 5.0,
+      "code_line": 1,
+      "script": "First, the string variable 'x' is created and assigned the value 'guy'. Look at the memory box to see the change.",
+      "mascot_state": "pointing_at_code",
+      "animations": [
+        { "type": "MemoryBox", "var_name": "x", "old_value": "None", "new_value": "\"guy\"", "target_pos": [700, 200] }
+      ]
+    },
+    {
+      "time_start": 5.0,
+      "duration": 6.0,
+      "code_line": 2,
+      "script": "The program checks the condition: Is x equal to the string 'student'? Since 'guy' is not equal to 'student', the condition is false. We skip the next line.",
+      "mascot_state": "hands_on_head",
+      "animations": [
+        { "type": "CodeHighlight", "line_start": 2, "line_end": 2 }
+      ]
+    },
+    {
+      "time_start": 11.0,
+      "duration": 5.0,
+      "code_line": 4,
+      "script": "We now create a new variable, 'y', and assign it the string value 'guy'. Since the 'if' condition was false, we skip line 3.",
+      "mascot_state": "pointing_at_code",
+      "animations": [
+        { "type": "MemoryBox", "var_name": "y", "old_value": "None", "new_value": "\"guy\"", "target_pos": [700, 350] }
+      ]
+    },
+    {
+      "time_start": 16.0,
+      "duration": 5.0,
+      "code_line": 5,
+      "script": "Finally, the program prints the current value of y, which is the string 'guy'.",
+      "mascot_state": "nodding_yes",
+      "animations": [
+        { "type": "OutputText", "text": "\"guy\"", "position": [100, 600] }
+      ]
+    }
+  ]
+}

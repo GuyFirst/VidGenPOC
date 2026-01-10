@@ -1,0 +1,62 @@
+{
+  "code_snippet": [
+    "x = 4",
+    "while (x != 0):",
+    "    if x == 4:",
+    "        x = x - 1"
+  ],
+  "total_duration": 22.0,
+  "frames": [
+    {
+      "time_start": 0.0,
+      "duration": 4.0,
+      "code_line": 1,
+      "script": "The variable x is initialized to 4. We are starting the while loop.",
+      "mascot_state": "pointing_at_code",
+      "animations": [
+        { "type": "MemoryBox", "var_name": "x", "old_value": "None", "new_value": "4", "target_pos": [700, 200] }
+      ]
+    },
+    {
+      "time_start": 4.0,
+      "duration": 4.0,
+      "code_line": 2,
+      "script": "Iteration 1: The condition (x is not zero) is true. We enter the loop.",
+      "mascot_state": "nodding_yes",
+      "animations": [
+        { "type": "CodeHighlight", "line_start": 2, "line_end": 2 }
+      ]
+    },
+    {
+      "time_start": 8.0,
+      "duration": 4.0,
+      "code_line": 3,
+      "script": "The conditional check: is x equal to 4? Yes, it is. We decrement x by 1, so x becomes 3.",
+      "mascot_state": "hands_on_head",
+      "animations": [
+        { "type": "MemoryBoxUpdate", "var_name": "x", "old_value": "4", "new_value": "3", "target_pos": [700, 200], "effect": "flash" }
+      ]
+    },
+    {
+      "time_start": 12.0,
+      "duration": 4.0,
+      "code_line": 2,
+      "script": "Iteration 2: The loop jumps back to the while condition. x is 3, which is not zero. We enter the loop again.",
+      "mascot_state": "pointing_at_code",
+      "animations": [
+        { "type": "CodeHighlight", "line_start": 2, "line_end": 2 }
+      ]
+    },
+    {
+      "time_start": 16.0,
+      "duration": 6.0,
+      "code_line": 3,
+      "script": "Warning! The 'if' condition is now false (x is 3, not 4). Since the variable 'x' is never decremented again, the loop will run forever. This is an infinite loop.",
+      "mascot_state": "waving_bye",
+      "animations": [
+        { "type": "CodeHighlight", "line_start": 3, "line_end": 3 },
+        { "type": "OutputText", "text": "ERROR: Infinite Loop Detected!", "position": [100, 600] }
+      ]
+    }
+  ]
+}

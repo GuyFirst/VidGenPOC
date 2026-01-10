@@ -1,0 +1,51 @@
+{
+  "code_snippet": [
+    "x = 5",
+    "if (x == 5):",
+    "    x = 7",
+    "print(x)"
+  ],
+  "total_duration": 12.5,
+  "frames": [
+    {
+      "time_start": 0.0,
+      "duration": 3.0,
+      "code_line": 1,
+      "script": "The variable x is created and assigned the value 5. Watch as it appears in memory.",
+      "mascot_state": "pointing_at_code",
+      "animations": [
+        { "type": "MemoryBox", "var_name": "x", "old_value": "None", "new_value": "5", "target_pos": [700, 200] }
+      ]
+    },
+    {
+      "time_start": 3.0,
+      "duration": 3.5,
+      "code_line": 2,
+      "script": "The program checks the condition: Is x equal to 5? It is, so we enter the block.",
+      "mascot_state": "nodding_yes",
+      "animations": [
+        { "type": "CodeHighlight", "line_start": 2, "line_end": 2 }
+      ]
+    },
+    {
+      "time_start": 6.5,
+      "duration": 3.0,
+      "code_line": 3,
+      "script": "Inside the condition, x is updated to the new value of 7. See how the memory box flashes.",
+      "mascot_state": "hands_on_head",
+      "animations": [
+        { "type": "MemoryBoxUpdate", "var_name": "x", "old_value": "5", "new_value": "7", "target_pos": [700, 200], "effect": "flash" }
+      ]
+    },
+    {
+      "time_start": 9.5,
+      "duration": 3.0,
+      "code_line": 4,
+      "script": "Finally, the program prints the current value of x, which is 7.",
+      "mascot_state": "waving_bye",
+      "animations": [
+        { "type": "OutputText", "text": "7", "position": [100, 600] }
+      ]
+    }
+  ]
+}
