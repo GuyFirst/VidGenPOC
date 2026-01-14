@@ -3,7 +3,7 @@
 import os
 import json
 from ast_service import parse_code
-from code_animator_poc.engine import render_code_animation, FONT_PATH
+from code_animator_poc.engine import render_code_animation
 
 # Configuration and Paths
 SOURCE_CODE_FILE = 'C:\\Users\\GuyFirst\\code-animator\\VidGenPOC\\ast_service\\code_snippets\\code_snippet2.py'  # The Python file you want to animate
@@ -59,24 +59,30 @@ def main():
 
     # 4. RENDER VIDEO
     try:
-        final_video, num_frames = render_code_animation(json_input)
+        print("Rendering video...")
+        
+        # Capture the path returned by the engine
+        video_path = render_code_animation(json_input)
+        
+        if video_path and os.path.exists(video_path):
+            print("------------------------------------------------")
+            print(f"Video created successfully!")
+            print(f"Opening: {video_path}")
+            print("------------------------------------------------")
+            
+            # This command opens the video with your default player (Windows)
+            os.startfile(video_path)
+        else:
+            print("Error: Video generation failed (no path returned).")
+            
     except Exception as e:
         print(f"An error occurred during video generation: {e}")
+        import traceback
+        traceback.print_exc()
         return
 
-    print(f"Rendering final video to '{OUTPUT_VIDEO_FILE}'...")
-    final_video.write_videofile(OUTPUT_VIDEO_FILE, fps=24, codec='libx264', audio_codec='aac')
-    print("Video rendering complete!")
-
     # 5. CLEANUP
-    print("Cleaning up temporary audio files...")
-    for i in range(num_frames):
-        try:
-            os.remove(f"temp_audio_{i}.mp3")
-        except OSError:
-            pass
-
-    print("Cleanup complete. POC finished successfully.")
+    print("Process complete.")
 
 if __name__ == "__main__":
     main()

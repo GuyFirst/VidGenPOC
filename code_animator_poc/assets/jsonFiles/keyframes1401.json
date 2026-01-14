@@ -1,90 +1,34 @@
 {
-  "code_snippet": [
-    "total = 0",
-    "for i in range(1, 6):",
-    "    total = total + i",
-    "    if total > 5:",
-    "        print(\"Total is now big\")",
-    "    else:",
-    "        print(\"Still small\")"
-  ],
-  "total_duration": 35.0,
-  "frames": [
+  "sequence": [
     {
-      "code_line": 1,
-      "script": "First, we initialize the variable total and set it to zero.",
-      "mascot_state": "pointing_at_code",
-      "animations": [
-        { "type": "CreateVariable", "var_name": "total", "value": "0", "color": "BLUE" }
-      ]
+      "type": "VarCreate",
+      "code": "score = 100",
+      "narration": "First, we initialize the variable 'score' with 100.",
+      "params": {
+        "name": "score",
+        "value": 100,
+        "type": "int"
+      }
     },
     {
-      "code_line": 2,
-      "script": "The for loop begins. We create a counter variable i, which starts at 1.",
-      "mascot_state": "nodding_yes",
-      "animations": [
-        { "type": "CreateVariable", "var_name": "i", "value": "1", "color": "ORANGE" }
-      ]
+      "type": "VarCreate",
+      "code": "player_name = 'Guy'",
+      "narration": "Next, we assign the string 'Guy' to the player_name variable.",
+      "params": {
+        "name": "player_name",
+        "value": "'Guy'",
+        "type": "str"
+      }
     },
     {
-      "code_line": 3,
-      "script": "Now, watch as we add i into our total. The orange block merges into the blue block, updating the sum to 1.",
-      "mascot_state": "hands_on_head",
-      "animations": [
-        { 
-          "type": "IncrementVariable", 
-          "target": "total", 
-          "adder": "i", 
-          "old_val": "0", 
-          "new_val": "1" 
-        }
-      ]
-    },
-    {
-      "code_line": 4,
-      "script": "We check the condition: is total greater than 5? Currently, 1 is not greater than 5.",
-      "mascot_state": "pointing_at_code",
-      "animations": [
-        { "type": "CompareVariable", "var_name": "total", "val": "1", "threshold": "5", "result": "False" }
-      ]
-    },
-    {
-      "code_line": 7,
-      "script": "Because the condition was false, the program executes the else block and prints Still Small.",
-      "mascot_state": "nodding_yes",
-      "animations": [
-        { "type": "OutputText", "text": "Still small" }
-      ]
-    },
-    {
-      "code_line": 3,
-      "script": "Fast forwarding! After a few iterations, i is now 3 and total has reached 6.",
-      "mascot_state": "pointing_at_code",
-      "animations": [
-        { 
-          "type": "IncrementVariable", 
-          "target": "total", 
-          "adder": "i", 
-          "old_val": "3", 
-          "new_val": "6" 
-        }
-      ]
-    },
-    {
-      "code_line": 4,
-      "script": "Now, the condition total greater than 5 is true. The code will enter the if block.",
-      "mascot_state": "nodding_yes",
-      "animations": [
-        { "type": "CompareVariable", "var_name": "total", "val": "6", "threshold": "5", "result": "True" }
-      ]
-    },
-    {
-      "code_line": 5,
-      "script": "Success! The program prints that the total is now big.",
-      "mascot_state": "waving_bye",
-      "animations": [
-        { "type": "OutputText", "text": "Total is now big" }
-      ]
+      "type": "VarCreate",
+      "code": "is_alive = True",
+      "narration": "Finally, we set the boolean flag is_alive to True.",
+      "params": {
+        "name": "is_alive",
+        "value": "True",
+        "type": "bool"
+      }
     }
   ]
 }
