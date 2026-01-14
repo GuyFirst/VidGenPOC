@@ -209,6 +209,3 @@ def render_code_animation(json_data):
     final_video.duration = total_duration
 
     return final_video, len(data['frames'])
-
-
-

@@ -10,7 +10,28 @@ from .registry import registry
 # Import language implementations so they register themselves on package import
 from . import python_parser  # noqa: F401
 
-__all__ = ["parse_code", "registry"]
+__all__ = ["parse_code", "registry", "run_code", "run_file"]
+
+
+def run_code(code: str, language: str = "python") -> dict:
+    """Convenience wrapper that parses a code snippet and returns compact AST.
+
+    This makes it easy to start the service programmatically and provide the
+    snippet string directly.
+    """
+    return parse_code(code, language)
+
+
+def run_file(path: str, language: str = "python") -> dict:
+    """Read a source file and return the compact AST.
+
+    This helper lets you pass a file path as a variable inside your code
+    (no CLI involved). Example:
+        ast = run_file("/path/to/script.py")
+    """
+    with open(path, "r", encoding="utf-8") as fh:
+        code = fh.read()
+    return run_code(code, language)
 
 
 def parse_code(code: str, language: str = "python") -> dict:
